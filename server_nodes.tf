@@ -101,7 +101,6 @@ locals {
         [
           "--node-ip ${server.ip}",
           "--node-name '${try(server.name, key)}'",
-          "--server https://${local.root_advertise_ip_k3s}:6443",
           "--cluster-domain '${var.cluster_domain}'",
           "--cluster-cidr ${var.cidr.pods}",
           "--service-cidr ${var.cidr.services}",
